@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabs = document.querySelectorAll(".tab-link");
     const contents = document.querySelectorAll(".tab-content");
 
-    // Set default tab
+    // Show "About Me" section by default
     document.getElementById("about").style.display = "block";
 
     tabs.forEach(tab => {
