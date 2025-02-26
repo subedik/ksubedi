@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabs = document.querySelectorAll(".tab-link");
     const contents = document.querySelectorAll(".tab-content");
 
+    // Set default tab
+    document.getElementById("about").style.display = "block";
+
     tabs.forEach(tab => {
         tab.addEventListener("click", function (event) {
             event.preventDefault();
-
             let target = this.getAttribute("data-tab");
 
             // Hide all sections
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 content.style.display = "none";
             });
 
-            // Show the selected section
+            // Show selected section
             document.getElementById(target).style.display = "block";
         });
     });
